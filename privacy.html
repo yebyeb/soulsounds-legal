@@ -4,33 +4,72 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Soulsounds — Privacy Policy</title>
+<link rel="icon" href="icon.png">
+<meta name="theme-color" content="#080d0b">
 <style>
-  body{max-width:800px;margin:0 auto;padding:24px 20px;font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#333}
-  h1{color:#1b1b4b;letter-spacing:-.02em} h2{color:#1b1b4b;margin-top:2em;font-size:20px}
-  a{color:#4d4ad5}
-  .muted{color:#666;font-size:14px}
-  .highlight{background:#f5f4ff;border-left:4px solid #5e5ce6;padding:14px 18px;margin:20px 0;border-radius:4px}
-  ul{padding-left:22px}
-  @media (prefers-color-scheme: dark){
-    body{background:#0e0e10;color:#d7d6de}
-    h1,h2{color:#fff} a{color:#c2c1ff} .muted{color:#918fa0}
-    .highlight{background:#1b1b1d;border-left-color:#5e5ce6}
+  /* ── PALET LOGODAN ────────────────────────────────────────────
+     Renkler uygulamanın kendi simgesinden örneklendi: koyu yeşile
+     yakın siyah zeminde (#020807) açık yeşil yapraklar (#d4e2db).
+     Bu sayfalar bir tur önceki adın (Nightlull) indigo/mavi
+     paletini taşıyordu ve yeni logoyla hiçbir ilgisi yoktu.
+     Kontrastlar ölçüldü: koyu temada gövde 14,1:1 / bağlantı
+     12,0:1; açık temada gövde 12,4:1 / bağlantı 6,1:1 — hepsi
+     WCAG AA'nın (4,5) üstünde. */
+  :root{
+    --bg:#ffffff; --ink:#15241f; --body:#2b3733; --muted:#5d6b65;
+    --link:#1f6f57; --card:#eef5f1; --line:#d5e5dd; --rule:#2f8a6c;
+    --warnbg:#fdf5f3; --warnline:#b3402c;
   }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#080d0b; --ink:#f2f7f4; --body:#d3ddd8; --muted:#93a49c;
+      --link:#9fd6c0; --card:#111a16; --line:#1d2b25; --rule:#4f9d81;
+      --warnbg:#1c1512; --warnline:#d08a76;
+    }
+  }
+  body{max-width:800px;margin:0 auto;padding:24px 20px;
+       font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+       background:var(--bg);color:var(--body)}
+  /* Simge her sayfanın başında: kullanıcı hangi uygulamanın
+     koşullarını okuduğunu ilk bakışta görsün. Ana sayfada zaten
+     vardı, alt sayfalarda hiç yoktu. */
+  .brand{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+  .brand img{width:44px;height:44px;border-radius:23%;flex:none;
+             box-shadow:0 3px 12px rgba(0,0,0,.28)}
+  .brand span{font-weight:700;font-size:17px;color:var(--ink);letter-spacing:-.01em}
+  h1{color:var(--ink);letter-spacing:-.02em}
+  h2{color:var(--ink);margin-top:2em;font-size:20px}
+  h3{color:var(--ink);margin-top:1.4em;font-size:17px}
+  a{color:var(--link)}
+  .muted,.subtitle{color:var(--muted);font-size:14px}
+  .subtitle{font-size:16px;margin-bottom:28px}
+  .highlight,.card{background:var(--card);border:1px solid var(--line);
+       padding:14px 18px;margin:20px 0;border-radius:10px}
+  .highlight{border-left:4px solid var(--rule)}
+  .warn{background:var(--warnbg);border-left:4px solid var(--warnline);
+        padding:14px 18px;margin:20px 0;border-radius:10px}
+  ul{padding-left:22px}
 </style>
 </head>
 <body>
+  <a class="brand" href="index.html" style="text-decoration:none">
+    <img src="icon.png" alt="">
+    <span>Soulsounds</span>
+  </a>
 <h1>Privacy Policy</h1>
-<p class="muted">Last Updated: July 28, 2026</p>
+<p class="muted">Last Updated: August 20, 2026</p>
 
 <p>This Privacy Policy explains how information is handled when you use
 <strong>Soulsounds</strong> (the "App"). By using the App, you agree to this policy.</p>
 
 <div class="highlight">
   <strong>The short version:</strong> Nothing leaves your phone. Soulsounds has no user
-  accounts, no servers of our own, no analytics and no advertising. The App makes no
-  network requests whatsoever — every sound file ships inside the app bundle, and the
-  music layers are generated on your device as they play. There is nothing for us to
-  collect, because we never receive anything.
+  accounts, no servers of our own, no analytics and no advertising. Every sound file ships inside
+  the app bundle and the music layers are generated on your device as they play, so
+  listening works with no connection at all. The only time the App reaches a network is
+  when you buy, restore or manage a subscription — and that is a conversation with
+  <strong>Apple</strong>, not with us. There is nothing for us to collect, because we
+  never receive anything.
 </div>
 
 <h2>1. What Soulsounds Does</h2>
@@ -38,8 +77,12 @@
 similar — so you can fall asleep, relax or focus. You can layer several sounds together,
 set their volumes, save the result as your own mix, and run a sleep timer that fades the
 audio out.</p>
-<p>All audio is bundled with the App or synthesised on your device in real time. The App
-does not stream, download, or request anything from the internet.</p>
+<p>Soulsounds also offers an optional paid subscription, which unlocks layering several
+sounds at once and the rest of the catalogue.</p>
+<p>All audio is bundled with the App or synthesised on your device in real time: nothing
+is streamed or downloaded, and playback works in airplane mode. The App reaches the
+network only for the subscription actions Apple handles — reading the current prices,
+completing a purchase, and restoring an earlier one.</p>
 
 <h2>2. Information We Collect</h2>
 <p><strong>None.</strong> We do not collect, receive, or have access to any information
@@ -47,7 +90,8 @@ about you or your use of the App. Specifically, the App has:</p>
 <ul>
   <li>no account or login system;</li>
   <li>no analytics SDK, no advertising SDK, no crash-reporting SDK, no social-media SDK;</li>
-  <li>no server of our own, and no network calls of any kind;</li>
+  <li>no server of our own — the App never sends anything to us, and the only network
+  calls it makes are the App Store subscription requests described in section 6;</li>
   <li>no access to your contacts, photos, camera, microphone, or location.</li>
 </ul>
 <p>We do not build user profiles, and we do not sell or share data, because we do not
@@ -57,12 +101,19 @@ receive any.</p>
 <p>The App saves a small amount of data locally, using the operating system's standard
 app-preferences storage, so that it can remember your setup between sessions:</p>
 <ul>
-  <li>your settings — chosen language, light/dark theme, and the last sleep-timer
-  duration;</li>
+  <li>your settings — chosen language, light/dark theme, sleep-timer duration, the star
+  sign you picked if any, the transition interval, and the name you typed if you gave
+  one;</li>
   <li>your saved mixes — the names you gave them, the sounds they contain, and the volume
   of each layer;</li>
+  <li>your playlists — their names and which of your mixes they hold;</li>
   <li>the mix that was playing last, so the App can restore it;</li>
-  <li>whether you have completed the initial mood question.</li>
+  <li>how many nights you have used the App, and when the system rating prompt was last
+  requested, so that you are not asked again too soon;</li>
+  <li>whether you have completed the initial mood question, whether the introductory
+  subscription screen has been shown once, and whether a subscription has ever been
+  active on this device — the last of these only so that the App does not show a sales
+  screen to someone who has already paid.</li>
 </ul>
 <p>This data is a few kilobytes of text. It stays in the App's private storage area on
 your device, it is never transmitted, and it is removed when you delete the App. We
@@ -80,18 +131,22 @@ player controls. This is handled entirely by iOS on your device. No playback inf
 is reported to us or to any third party.</p>
 
 <h2>6. Purchases</h2>
-<p>Soulsounds is currently free and contains no in-app purchases. If optional paid features
-are introduced in a future version, they will be sold and processed entirely by the
-<strong>Apple App Store</strong> using your Apple Account. We would never see or store
-your payment details, card numbers, or billing address. Apple may provide us with
+<p>Soulsounds offers an optional auto-renewing subscription, sold as a monthly or a yearly
+plan. It is sold and processed entirely by the <strong>Apple App Store</strong> using your
+Apple Account. We never see or store your payment details, card numbers, or billing
+address, and we cannot tell who subscribed.</p>
+<p>To know whether to unlock the paid features, the App asks the App Store on your device
+whether a valid subscription exists. That check is made by Apple's StoreKit framework, the
+answer stays on your device, and it is never sent to us. Apple may provide us with
 anonymous, aggregated sales reports that cannot identify you. Apple's handling of purchase
 data is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy
 Policy</a>.</p>
 
 <h2>7. Third-Party Services</h2>
-<p>The only third party involved in normal use is <strong>Apple</strong>, for app
-distribution. The App embeds no other third-party service and makes no network requests
-of its own.</p>
+<p>The only third party involved in normal use is <strong>Apple</strong> — for app
+distribution, for the subscription described above, and for the occasional rating prompt,
+which is Apple's own system dialog. The App embeds no other third-party service, no
+analytics and no advertising, and makes no network requests of its own.</p>
 
 <h2>8. Children's Privacy</h2>
 <p>The App is intended for a general audience and is not directed at children under the

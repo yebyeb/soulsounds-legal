@@ -4,23 +4,58 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Soulsounds — Support</title>
+<link rel="icon" href="icon.png">
+<meta name="theme-color" content="#080d0b">
 <style>
-  body{max-width:800px;margin:0 auto;padding:24px 20px;font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#333}
-  h1{color:#1b1b4b;letter-spacing:-.02em;margin-bottom:4px}
-  h2{color:#1b1b4b;margin-top:2em;font-size:20px}
-  h3{color:#3a3a52;margin-top:1.4em;font-size:17px}
-  a{color:#4d4ad5}
-  .subtitle{color:#666;margin-bottom:28px}
-  .card{background:#f5f4ff;border:1px solid #e2e0f5;border-radius:10px;padding:16px 18px;margin:16px 0}
-  ul{padding-left:22px}
-  @media (prefers-color-scheme: dark){
-    body{background:#0e0e10;color:#d7d6de}
-    h1,h2{color:#fff} h3{color:#c7c4d7} a{color:#c2c1ff} .subtitle{color:#918fa0}
-    .card{background:#1b1b1d;border-color:#2a2a2c}
+  /* ── PALET LOGODAN ────────────────────────────────────────────
+     Renkler uygulamanın kendi simgesinden örneklendi: koyu yeşile
+     yakın siyah zeminde (#020807) açık yeşil yapraklar (#d4e2db).
+     Bu sayfalar bir tur önceki adın (Nightlull) indigo/mavi
+     paletini taşıyordu ve yeni logoyla hiçbir ilgisi yoktu.
+     Kontrastlar ölçüldü: koyu temada gövde 14,1:1 / bağlantı
+     12,0:1; açık temada gövde 12,4:1 / bağlantı 6,1:1 — hepsi
+     WCAG AA'nın (4,5) üstünde. */
+  :root{
+    --bg:#ffffff; --ink:#15241f; --body:#2b3733; --muted:#5d6b65;
+    --link:#1f6f57; --card:#eef5f1; --line:#d5e5dd; --rule:#2f8a6c;
+    --warnbg:#fdf5f3; --warnline:#b3402c;
   }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#080d0b; --ink:#f2f7f4; --body:#d3ddd8; --muted:#93a49c;
+      --link:#9fd6c0; --card:#111a16; --line:#1d2b25; --rule:#4f9d81;
+      --warnbg:#1c1512; --warnline:#d08a76;
+    }
+  }
+  body{max-width:800px;margin:0 auto;padding:24px 20px;
+       font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+       background:var(--bg);color:var(--body)}
+  /* Simge her sayfanın başında: kullanıcı hangi uygulamanın
+     koşullarını okuduğunu ilk bakışta görsün. Ana sayfada zaten
+     vardı, alt sayfalarda hiç yoktu. */
+  .brand{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+  .brand img{width:44px;height:44px;border-radius:23%;flex:none;
+             box-shadow:0 3px 12px rgba(0,0,0,.28)}
+  .brand span{font-weight:700;font-size:17px;color:var(--ink);letter-spacing:-.01em}
+  h1{color:var(--ink);letter-spacing:-.02em}
+  h2{color:var(--ink);margin-top:2em;font-size:20px}
+  h3{color:var(--ink);margin-top:1.4em;font-size:17px}
+  a{color:var(--link)}
+  .muted,.subtitle{color:var(--muted);font-size:14px}
+  .subtitle{font-size:16px;margin-bottom:28px}
+  .highlight,.card{background:var(--card);border:1px solid var(--line);
+       padding:14px 18px;margin:20px 0;border-radius:10px}
+  .highlight{border-left:4px solid var(--rule)}
+  .warn{background:var(--warnbg);border-left:4px solid var(--warnline);
+        padding:14px 18px;margin:20px 0;border-radius:10px}
+  ul{padding-left:22px}
 </style>
 </head>
 <body>
+  <a class="brand" href="index.html" style="text-decoration:none">
+    <img src="icon.png" alt="">
+    <span>Soulsounds</span>
+  </a>
   <h1>Soulsounds</h1>
   <p class="subtitle">Nature soundscapes for sleep and calm — Support &amp; Help</p>
 
@@ -60,10 +95,17 @@
   <h2>Mixing sounds</h2>
 
   <h3>How do I combine sounds?</h3>
-  <p>Add a sound, then add another. Each one becomes a layer with its own volume slider, so
-  you can put light rain under loud ocean, or crickets under a distant thunderstorm. There
-  is no fixed limit — but three or four layers is usually where a mix stops getting better
-  and starts getting muddy.</p>
+  <p>Open a sound, then use <em>Add sound</em> to put another underneath it. Each one
+  becomes a layer with its own volume, so you can set light rain under a loud ocean, or
+  crickets under a distant thunderstorm.</p>
+  <p>Without a subscription you can listen to any single sound in the catalogue, one at a
+  time. Layering is what Soulsounds Premium unlocks: up to five sounds at once. Three or
+  four is usually where a mix stops getting better and starts getting muddy.</p>
+
+  <h3>I tapped a sound in Explore and it replaced what was playing</h3>
+  <p>That is intended: in Explore a tap plays the sound you tapped. To build a mix instead,
+  use <em>Add sound</em> in the player, or the plus button in My Mixes — those are the
+  places where a tap adds rather than replaces.</p>
 
   <h3>What is the difference between the nature sounds and the music?</h3>
   <p>The nature sounds are real recordings that ship inside the app. The music layers are
@@ -91,6 +133,29 @@
   the audio, or a flat battery can all change when playback actually stops. Do not depend
   on it for anything that matters.</p>
 
+  <h2>Subscription</h2>
+
+  <h3>What does Soulsounds Premium include?</h3>
+  <p>Layering up to five sounds at once, the full catalogue including the music beds, and
+  saving your own mixes without limits. Everything else — single sounds, the sleep timer,
+  the star readings — works without paying.</p>
+
+  <h3>How do I cancel?</h3>
+  <p>Cancelling is done in your Apple Account, not in the app: <em>Settings → your name →
+  Subscriptions → Soulsounds</em>. Cancelling stops the next renewal; the paid features
+  stay available until the period you already paid for ends, and the app shows you that
+  date.</p>
+
+  <h3>I subscribed but a new phone shows the app as free</h3>
+  <p>Open the subscription screen and tap <em>Restore</em>. That asks the App Store, using
+  the same Apple Account, to hand your subscription back. It needs a connection.</p>
+
+  <h3>I switched from monthly to yearly and nothing changed</h3>
+  <p>Apple decides when a plan change takes effect. Moving to the longer plan applies
+  straight away; moving to the shorter one waits until the period you are in ends. Where a
+  change is queued, the subscription screen marks the new plan as next and shows the date
+  it starts.</p>
+
   <h2>Your data</h2>
 
   <h3>Where are my mixes stored?</h3>
@@ -99,7 +164,9 @@
 
   <h3>Does the app need the internet?</h3>
   <p>No. Every sound ships inside the app and the music is generated locally. Soulsounds
-  makes no network requests at all — it works in airplane mode.</p>
+  works in airplane mode. The one thing that does need a connection is the App Store:
+  buying, restoring or changing a subscription talks to Apple. The App says so on screen
+  when you are offline instead of failing silently.</p>
 
   <h3>What do you collect about me?</h3>
   <p>Nothing. No account, no server, no analytics, no advertising. Full detail:
@@ -108,8 +175,10 @@
   <h2>Languages and appearance</h2>
 
   <h3>Which languages are supported?</h3>
-  <p>English, Turkish, German, French, Spanish and Japanese. The app follows your device
-  language when it can, and you can override it in Settings.</p>
+  <p>Eighteen: English, Turkish, German, French, Spanish, Portuguese, Italian, Dutch,
+  Swedish, Norwegian, Danish, Finnish, Russian, Arabic, Persian, Japanese, Korean and
+  Simplified Chinese. Arabic and Persian are laid out right-to-left. The app follows your
+  device language when it can, and you can override it in Settings.</p>
 
   <h3>Can I use a light theme?</h3>
   <p>Yes — Settings offers dark, light, or follow-the-system. The dark theme is the default

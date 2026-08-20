@@ -4,25 +4,60 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Soulsounds — Terms of Use</title>
+<link rel="icon" href="icon.png">
+<meta name="theme-color" content="#080d0b">
 <style>
-  body{max-width:800px;margin:0 auto;padding:24px 20px;font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#333}
-  h1{color:#1b1b4b;letter-spacing:-.02em} h2{color:#1b1b4b;margin-top:2em;font-size:20px}
-  a{color:#4d4ad5}
-  .muted{color:#666;font-size:14px}
-  .highlight{background:#f5f4ff;border-left:4px solid #5e5ce6;padding:14px 18px;margin:20px 0;border-radius:4px}
-  .warn{background:#fdf6f5;border-left:4px solid #ba1a1a;padding:14px 18px;margin:20px 0;border-radius:4px}
-  ul{padding-left:22px}
-  @media (prefers-color-scheme: dark){
-    body{background:#0e0e10;color:#d7d6de}
-    h1,h2{color:#fff} a{color:#c2c1ff} .muted{color:#918fa0}
-    .highlight{background:#1b1b1d;border-left-color:#5e5ce6}
-    .warn{background:#241618;border-left-color:#e0917f}
+  /* ── PALET LOGODAN ────────────────────────────────────────────
+     Renkler uygulamanın kendi simgesinden örneklendi: koyu yeşile
+     yakın siyah zeminde (#020807) açık yeşil yapraklar (#d4e2db).
+     Bu sayfalar bir tur önceki adın (Nightlull) indigo/mavi
+     paletini taşıyordu ve yeni logoyla hiçbir ilgisi yoktu.
+     Kontrastlar ölçüldü: koyu temada gövde 14,1:1 / bağlantı
+     12,0:1; açık temada gövde 12,4:1 / bağlantı 6,1:1 — hepsi
+     WCAG AA'nın (4,5) üstünde. */
+  :root{
+    --bg:#ffffff; --ink:#15241f; --body:#2b3733; --muted:#5d6b65;
+    --link:#1f6f57; --card:#eef5f1; --line:#d5e5dd; --rule:#2f8a6c;
+    --warnbg:#fdf5f3; --warnline:#b3402c;
   }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#080d0b; --ink:#f2f7f4; --body:#d3ddd8; --muted:#93a49c;
+      --link:#9fd6c0; --card:#111a16; --line:#1d2b25; --rule:#4f9d81;
+      --warnbg:#1c1512; --warnline:#d08a76;
+    }
+  }
+  body{max-width:800px;margin:0 auto;padding:24px 20px;
+       font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+       background:var(--bg);color:var(--body)}
+  /* Simge her sayfanın başında: kullanıcı hangi uygulamanın
+     koşullarını okuduğunu ilk bakışta görsün. Ana sayfada zaten
+     vardı, alt sayfalarda hiç yoktu. */
+  .brand{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+  .brand img{width:44px;height:44px;border-radius:23%;flex:none;
+             box-shadow:0 3px 12px rgba(0,0,0,.28)}
+  .brand span{font-weight:700;font-size:17px;color:var(--ink);letter-spacing:-.01em}
+  h1{color:var(--ink);letter-spacing:-.02em}
+  h2{color:var(--ink);margin-top:2em;font-size:20px}
+  h3{color:var(--ink);margin-top:1.4em;font-size:17px}
+  a{color:var(--link)}
+  .muted,.subtitle{color:var(--muted);font-size:14px}
+  .subtitle{font-size:16px;margin-bottom:28px}
+  .highlight,.card{background:var(--card);border:1px solid var(--line);
+       padding:14px 18px;margin:20px 0;border-radius:10px}
+  .highlight{border-left:4px solid var(--rule)}
+  .warn{background:var(--warnbg);border-left:4px solid var(--warnline);
+        padding:14px 18px;margin:20px 0;border-radius:10px}
+  ul{padding-left:22px}
 </style>
 </head>
 <body>
+  <a class="brand" href="index.html" style="text-decoration:none">
+    <img src="icon.png" alt="">
+    <span>Soulsounds</span>
+  </a>
 <h1>Terms of Use</h1>
-<p class="muted">Last Updated: July 28, 2026</p>
+<p class="muted">Last Updated: August 20, 2026</p>
 
 <p>These Terms of Use ("Terms") govern your use of <strong>Soulsounds</strong> (the "App").
 By downloading or using the App, you agree to these Terms. If you do not agree, do not use
@@ -87,14 +122,38 @@ on your device; we cannot access, restore, or delete them for you.</p>
   cloud copy.
 </div>
 
-<h2>7. Purchases</h2>
-<p>The App is currently free and contains no in-app purchases. If optional paid features
-are introduced in a future version, all purchases will be processed by Apple through your
-Apple Account, subject to the Apple Media Services Terms and Conditions. Where a purchase
-is an auto-renewing subscription, it renews automatically at the end of each period unless
-cancelled at least 24 hours before the period ends; you can manage or cancel subscriptions
-in your Apple Account settings. Refunds are handled by Apple under Apple's policies; we
-cannot issue refunds directly.</p>
+<h2>7. Subscriptions and Purchases</h2>
+<p>The App is free to download and can be used without paying. An optional subscription,
+<strong>Soulsounds Premium</strong>, unlocks layering several sounds at once and the rest
+of the catalogue. It is offered as two plans:</p>
+<ul>
+  <li>a <strong>monthly</strong> plan, billed once a month;</li>
+  <li>a <strong>yearly</strong> plan, billed once a year.</li>
+</ul>
+<p>The price of each plan is shown on the subscription screen inside the App before you
+confirm anything, in your own currency. Prices are set per region by Apple's pricing
+tiers and can change; a change never applies to a period you have already paid for.</p>
+<p><strong>Free trial.</strong> A plan may be offered with a free trial. Its length is
+shown on the subscription screen before you confirm. Apple allows one introductory offer
+per subscription group, so a trial can be used once — taking it on one plan uses it for
+the other as well. Unless you cancel at least 24 hours before the trial ends, it turns
+into a paid subscription automatically at the price shown.</p>
+<p><strong>Renewal.</strong> Subscriptions renew automatically at the end of each period
+unless cancelled at least 24 hours before that period ends. Your Apple Account is charged
+for the renewal within 24 hours of the end of the current period.</p>
+<p><strong>Changing plan.</strong> You can switch between the monthly and yearly plans
+from the subscription screen. Apple decides when a change takes effect: moving to the
+longer plan applies immediately and Apple credits the unused part of what you paid, while
+moving to the shorter one begins at the end of the period you are already in. The App
+shows you which plan is running and, where a change is queued, the date the new one
+starts.</p>
+<p><strong>Cancelling.</strong> You can cancel at any time in your Apple Account settings
+(Settings → your name → Subscriptions on iOS). Cancelling stops the next renewal; it does
+not end the period you have already paid for, and the paid features stay available until
+that period ends.</p>
+<p>All purchases are processed by Apple through your Apple Account, subject to the Apple
+Media Services Terms and Conditions. Refunds are handled by Apple under Apple's policies;
+we cannot issue refunds directly.</p>
 
 <h2>8. Availability and Changes</h2>
 <p>We may update, change, or discontinue the App or any of its features, including
